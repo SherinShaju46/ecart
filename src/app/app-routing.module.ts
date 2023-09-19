@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'product', loadChildren: () => import('./product/product.module').then(m => m.ProductModule) },
+  //to set localhost:4200 to product as default
+  {path: '', redirectTo: 'product', pathMatch: 'full'}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
