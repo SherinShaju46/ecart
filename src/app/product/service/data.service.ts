@@ -1,9 +1,23 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
+  //api call to access all product data
+  viewAllProducts(){
+    return this.http.get('http://localhost:3000/products')
+  }
+
+  //api to access single product data
+  viewProduct(id: any){
+    return this.http.get('http://localhost:3000/products/'+id)
+  }
+
+  addProduct(product: any){
+    return this.http.post('http://localhost:3000/products/', product)
+  }
 }

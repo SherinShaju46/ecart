@@ -1,0 +1,17 @@
+.shadow {
+    transition: .5s ease-in-out;
+}
+
+.shadow:hover {
+    transform: scale(1.07);
+}
+
+.cat {
+    border-radius: 20px;
+    background-color:white;
+    /* border: 2px solid blueviolet; */
+}
+
+/* .category{
+    background-color: rgba(128, 128, 128, 0.55);
+} */

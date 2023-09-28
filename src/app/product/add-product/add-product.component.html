@@ -1,1 +1,31 @@
-<p>add-product works!</p>
+<div class="container w-50 p-5 text-center">
+    <!-- reactive form -->
+    <h1>Add Product</h1>
+    <form (ngSubmit)="addProduct()" [formGroup]="addProductForm" class="p-3 mt-5 ms-5 text-center" style="border-radius: 20px;">
+        <div class="mt-2 p-2">
+            <input type="text" placeholder="Id" id="id1" name="id1" required class="form-control mb-4 p-2 "
+                formControlName="id" />
+            <input type="text" placeholder="Enter Product Name" id="n1" name="name" required
+                class="mb-4 p-2 form-control" formControlName="pname" />
+            <input type="text" placeholder="Enter Category Id" id="cid" name="categoryId" required
+                class="mb-4 p-2 form-control" formControlName="categoryId" />
+            <input type="text" placeholder="Type Description" id="d1" name="description" required
+                class="mb-4 p-2 form-control" formControlName="description" />
+            <input type="text" placeholder="Price" id="p1" name="price" required class="mb-4 p-2 form-control"
+                formControlName="price" />
+            <input type="text" placeholder="isAvailable" id="a1" name="" required class="mb-4 p-2 form-control"
+                formControlName="isAvailable" />
+            <input type="text" placeholder="Add Product Image" id="" name="productImage" required
+                class="mb-4 p-2 form-control" formControlName="productImage" />
+            <input type="text" placeholder="Rating" id="" name="rating" required class="mb-4 p-2 form-control"
+                formControlName="rating" />
+            <input type="text" placeholder="Review" id="" name="review" required class="mb-4 p-2 form-control"
+                formControlName="review" />
+            <input type="text" placeholder="Vendor name" id="" name="vendorName" required class="mb-4 p-2 form-control"
+                formControlName="vendorName" />
+            <input type="text" placeholder="Warranty" id="" name="warranty" required class="mb-4 p-2 form-control"
+                formControlName="warranty" />
+            <button type="submit" class="btn btn-outline-primary p-2" style="width: 100px;">Add</button>
+        </div>
+    </form>
+</div>
