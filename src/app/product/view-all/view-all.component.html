@@ -34,7 +34,9 @@
             </div>
             <!-- list all products -->
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div *ngFor="let i of filterProductsData" class="col mb-5">
+                
+                <!-- add filter pipe----"after loop | pipename : 'searchstring' : 'propertyName' "-->
+                <div *ngFor="let i of filterProductsData | search : 'table' : 'productName' " class="col mb-5">
                     <div class="shadow card h-100">
                         <!-- Product image-->
                         <img class="card-img-top" src={{i.productImage}} alt="..." style="height: 200px;" />

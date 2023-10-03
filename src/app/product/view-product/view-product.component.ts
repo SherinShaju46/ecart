@@ -15,7 +15,7 @@ export class ViewProductComponent {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((data: any) => {
       this.id = data.id
-      console.log(this.id);
+      // console.log(this.id);
     })
 
     this.dataService.viewProduct(this.id).subscribe((product) => {
