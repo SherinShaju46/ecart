@@ -10,6 +10,7 @@ export class ViewAllComponent implements OnInit {
   allProductArray: any
   filterProductsData: any
   isFilter: boolean = false;
+  searchData: any;
   constructor(private dataService: DataService) { }
   ngOnInit(): void {
     this.dataService.viewAllProducts().subscribe((products: any) => {
@@ -17,14 +18,19 @@ export class ViewAllComponent implements OnInit {
       this.filterProductsData = this.allProductArray
       // console.log(this.allProductArray);
     })
+
+    this.dataService.searchInput.subscribe((data: any) => {
+      console.log(data);
+      this.searchData = data;
+    })
   }
 
   filterProducts(catId: any) {
     this.isFilter=true
-    this.filterProductsData = this.allProductArray.filter((item: any) => 
+    this.filterProductsData = this.allProductArray.filter((item: any) =>
        item.categoryId==catId || catId==''
     )
     console.log(this.filterProductsData);
-    
+
   }
 }

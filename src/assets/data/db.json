@@ -129,19 +129,6 @@
       "review": "15",
       "vendorName": "Stylish Dining Chairs",
       "warranty": "1"
-    },
-    {
-      "id": "11",
-      "productName": "Frenzy Bedsheet",
-      "categoryId": "1",
-      "description": "The queen bedsheet comes in size (90x100 inches) or (228.5x254 cms) with two pillow cover",
-      "price": "899",
-      "isAvailable": "true",
-      "productImage": "https://i.postimg.cc/GmnM2XKh/beds.jpg",
-      "rating": "4",
-      "review": "21",
-      "vendorName": "Triofunfair ",
-      "warranty": "1"
     }
   ]
 }

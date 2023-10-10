@@ -42,7 +42,7 @@ export class AddProductComponent {
     }
     console.log(newData);
 
-    this.ds.addProduct(newData).subscribe((data: any) => {
+    this.ds.addProduct(newData).subscribe(() => {
       alert('added new product')
       this.router.navigateByUrl('product')
     })
