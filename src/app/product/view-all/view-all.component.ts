@@ -31,6 +31,5 @@ export class ViewAllComponent implements OnInit {
        item.categoryId==catId || catId==''
     )
     console.log(this.filterProductsData);
-
   }
 }

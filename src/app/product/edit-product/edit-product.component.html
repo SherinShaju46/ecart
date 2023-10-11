@@ -1,1 +1,19 @@
-<p>edit-product works!</p>
+<div class="container w-50 p-5 text-center">
+  <!-- ngModel form -->
+  <h1>Update Product Details</h1>
+  <form (ngSubmit)="updateData()" class="p-3 mt-5 ms-5 text-center" style="border-radius: 20px;">
+      <div class="mt-2 p-2">
+          <input [(ngModel)]="productData.productName" type="text" placeholder="Enter Product Name" id="n1" name="name" required class="mb-4 p-2 form-control" />
+          <input [(ngModel)]="productData.categoryId" type="text" placeholder="Enter Category Id" id="cid" name="categoryId" required class="mb-4 p-2 form-control" />
+          <input [(ngModel)]="productData.description" type="text" placeholder="Type Description" id="d1" name="description" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.price" type="text" placeholder="Price" id="p1" name="price" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.isAvailable" type="text" placeholder="isAvailable" id="a1" name="available" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.productImage" type="text" placeholder="Add Product Image" id="i1" name="productImage" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.rating" type="text" placeholder="Rating" id="r1" name="rating" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.review" type="text" placeholder="Review" id="r2" name="review" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.vendorName" type="text" placeholder="Vendor name" id="v1" name="vendorName" required class="mb-4 p-2 form-control"/>
+          <input [(ngModel)]="productData.warranty" type="text" placeholder="Warranty" id="w1" name="warranty" required class="mb-4 p-2 form-control"/>
+          <button type="submit" class="btn btn-outline-primary p-2" style="width: 100px;">Update</button>
+      </div>
+  </form>
+</div>

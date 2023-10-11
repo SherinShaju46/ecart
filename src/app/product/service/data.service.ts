@@ -28,4 +28,8 @@ export class DataService {
   deleteProduct(productId: any){
     return this.http.delete('http://localhost:3000/products/'+ productId)
   }
+
+  updateProduct(id: any, pdata: any){
+    return this.http.patch('http://localhost:3000/products/'+id, pdata)
+  }
 }
